@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Conference Game</title>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/dialog.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/theme.css" rel="stylesheet" />
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-dialog.min.js">
+        <!-- http://nakupanda.github.io/bootstrap3-dialog/ -->
+    </script>
+
+    <style>
+        .draggable {
+            width: 90px;
+            height: 80px;
+            padding: 5px;
+            float: left;
+            margin: 0 10px 10px 0;
+            font-size: .9em;
+        }
+        .ui-widget-header p,
+        .ui-widget-content p {
+            margin: 0;
+        }
+        #snaptarget {
+            height: 140px;
+        }
+        .drag {
+            z-index: 1060;
+        }
+        .drop {
+            z-index: 0;
+        }
+		
+		.frameit
+		{
+		color: red;
+	    border-style: solid;
+   		border-width: 5px;
+		}
+		
+		.scoreGood {
+		color: green;	
+		}
+		
+		.scoreBad {
+		color: grey;	
+		}
+		
+		.fullscreenLink{
+		color: grey;	
+		}
+		
+	
+		
+    </style>
+
+
+</head>
+
+<body>
+<div class="container">
+	<div id="navigation">
+  		<ul class="nav nav-pills">
+  			<li><a href="#" id="userViewLink">Home</a></li>
+ 		 	<li><a href="#" id="addPathLink">Swap</a></li>
+		  	<li><a href="#" id="handoffPathViewLink">List</a></li>
+		</ul>
+    </div>
+    
+    <div id="userView" class="appsection">
+            <h1>Greetings, Agent<br /><span class="userName"></span></h1>
+         	<p><b>Score:</b> <span class="score"></span> | <b>Secret Code</b>: <span class="secretCode"></span></p> 
+            <button type="button" class="btn btn-default tapToHide">Show/Hide Code</button>
+            <hr />
+            <p>Get New Recruits: http://goo.gl/nt5wip</p>
+            <img src="images/qrcode.png">
+            
+
+           <!-- <div class="tapToHide"><span><i>TAP TO SHOW/HIDE<br />YOUR SECRET CODE.</i></span></div>-->
+	</div>
+    <div id="handoffPathView" class="appsection">
+            <h1>Greetings, Agent<br /><span class="userName"></span></h1>
+            <p>Your have had these secret codes: <span class="handoffPath"></span></p>
+	</div>
+    <div id="addPathView" class="appsection">
+            <h1>Greetings, Agent<br /><span class="userName"></span></h1>
+            <div id="addSecretCode" class="appsection">
+            <h3>Swap your code with...</h3>
+         	 <form name="ajaxform" id="ajaxform" action="" method="POST">
+    			Name: <input type="text" id="secretCodeInputBox" name="fname" value =""/> <br/>
+    			
+			<input type="submit" name="mysubmit"  /></form>
+          <!--  <p>Already registered? <a href="/login">Sign in</a>.</p>-->
+	</div>
+	</div>
+    
+    
+ </div>
+ 
+
+
+            
+         
+         
+         </div>
+            
+      
+     </div>
+
+
+
+
+</body>
+    <script src="conferencegame_model.js"></script>
+
+    <script src="conferencegame.js"></script>
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44883231-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

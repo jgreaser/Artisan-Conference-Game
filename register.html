@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Conference Game</title>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/dialog.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/theme.css" rel="stylesheet" />
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-dialog.min.js">
+        <!-- http://nakupanda.github.io/bootstrap3-dialog/ -->
+    </script>
+
+    <style>
+        .draggable {
+            width: 90px;
+            height: 80px;
+            padding: 5px;
+            float: left;
+            margin: 0 10px 10px 0;
+            font-size: .9em;
+        }
+        .ui-widget-header p,
+        .ui-widget-content p {
+            margin: 0;
+        }
+        #snaptarget {
+            height: 140px;
+        }
+        .drag {
+            z-index: 1060;
+        }
+        .drop {
+            z-index: 0;
+        }
+		
+		.frameit
+		{
+		color: red;
+	    border-style: solid;
+   		border-width: 5px;
+		}
+		
+		.scoreGood {
+		color: green;	
+		}
+		
+		.scoreBad {
+		color: grey;	
+		}
+		
+		.fullscreenLink{
+		color: grey;	
+		}
+		
+    </style>
+
+
+</head>
+
+<body>   
+<div class="container">
+	
+    
+	<div id="register" class="appsection">
+            <h1>Welcome, agent.</h1>
+            <p>&nbsp;</p>
+          <!--  <p>Already registered? <a href="/login">Sign in</a>.</p>-->
+	</div>
+	<div id="register" class="appsection">
+            <h3>Existing agents, continue here.</h3>
+            <form name="ajaxform" id="ajaxform" action="" method="POST">
+              Secret Code: 
+   			     <input type="text" id="fname" name="fname" value =""/> <br/>
+    			
+			<input type="submit" name="mysubmit"  /></form>
+          <!--  <p>Already registered? <a href="/login">Sign in</a>.</p>-->
+	</div>
+
+    
+    
+ </div>
+ 
+
+
+            
+         
+         
+         </div>
+            
+      
+     </div>
+
+
+
+
+</body>
+    <script src="login.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44883231-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+</html>
